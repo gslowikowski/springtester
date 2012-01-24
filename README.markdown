@@ -19,3 +19,4 @@ Some text with 'code' inside
 
 # Heading
 ## Heading 2
+### Heading 3
