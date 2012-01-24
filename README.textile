@@ -12,6 +12,8 @@ multi-line code
 
 _italics_
 
+Here is some @inline code@
+
 *bold*
 
 * List
@@ -21,12 +23,6 @@ _italics_
 *# numbered list item
 *# second numbered list item
 
-Here is some @code@
-
-And some more code:
-@public void foo()
-    bar();
-}@
 
 h1. heading 1
 
