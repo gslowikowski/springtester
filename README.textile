@@ -1,3 +1,11 @@
+h1. Spring Tester
+
+This is a module for use with the "Play! Framework":http://www.playframework.org
+
+It's main purpose in life is to provide your application with tools for Test Driven Development (TDD) using the Spring Framework.
+
+For a usage guide, please read the manual found in the _documentation/manual_ directory.
+
 _italics_
 
 *bold*
@@ -14,8 +22,7 @@ Here is some @code@
 And some more code:
 @public void foo()
     bar();
-}
-@
+}@
 
 h1. heading 1
 
