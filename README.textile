@@ -6,7 +6,14 @@ It's main purpose in life is to provide your application with tools for Test Dri
 
 For a usage guide, please read the manual found in the _documentation/manual_ directory.
 
-_italics_
+bc. # Output "I love Ruby"
+say = "I love Ruby"
+puts say
+
+testing
+
+p.
+
 _italics_
 
 *bold*
