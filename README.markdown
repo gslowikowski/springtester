@@ -8,15 +8,18 @@ _italics_
 
 __stronger__
 
-Some text with 'code' inside
+Some text with `code` inside
 
     code line1
     code line2
 
 * list
-    *sub list
+    * sub list
 * hoorah!
 
 # Heading
+
 ## Heading 2
+
 ### Heading 3
+
