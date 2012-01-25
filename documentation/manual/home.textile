@@ -20,7 +20,7 @@ public class Person {
     }
 }
 
-The @AgeCalculator@ will then take the Person's birth date and calculate their age:
+The @AgeCalculator@ will then take the @Person'@s birth date and calculate their age:
 
 bc. @Component
 public class AgeCalculator {
