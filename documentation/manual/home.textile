@@ -4,7 +4,7 @@ The @springtester@ module is used in conjunction with the @spring@ module and pr
 
 h2. Getting started
 
-Include springtester in your Play! application by adding the following in your @dependencies.yml@:
+Include @springtester@ in your Play! application by adding the following in your @dependencies.yml@:
 
 bc. - play -> springtester [version]
 
