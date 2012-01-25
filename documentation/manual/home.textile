@@ -1,6 +1,7 @@
 h1. springtester
 
-The @springtester@ module is used in conjunction with the @spring@ module and provides additional classes for injecting mocks/stubs when writing tests for your Play! application.
+The @springtester@ module is used in conjunction with the @spring@ module and provides additional classes for injecting mocks/stubs when writing tests for
+your Play! application.
 
 h2. Getting started
 
@@ -10,5 +11,24 @@ bc. - play -> springtester [version]
 
 h2. Usage
 
+The @springtester@ module assumes you are wiring your application using the @spring@ module.  Here is an example of two classes being wired up
+using the @spring@ module:
+
+bc. @Component
+public class Person {
+    @Resource
+    private House house;
+
+    public void action() {
+        house.open();
+    }
+}
+
+@Component
+public class House {
+    public void open() {
+        ...
+    }
+}
 
 
