@@ -33,7 +33,7 @@ Now let's say you want to write a test for @Person@ called @PersonTest@ and wish
 
 bc. public final class PersonTest extends SpringMockitoUnitTestCase {
     @Subject private Person subject;
-    @Mock AgeCalculator mockAgeCalculator;
+    @Mock(name = "calculator") AgeCalculator mockAgeCalculator;
     @Test
     public void testGetAge() throws Exception {
         Mockito.when(mockAgeCalculator.calculate("1-January-1980")).thenReturn(20);
