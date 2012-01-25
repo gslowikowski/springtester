@@ -5,31 +5,3 @@ This is a module for use with the "Play! Framework":http://www.playframework.org
 It's main purpose in life is to provide your application with tools for Test Driven Development (TDD) using the Spring Framework.
 
 For a usage guide, please read the manual found in the _documentation/manual_ directory.
-
-bc. This is
-used for
-multi-line code
-
-_italics_
-
-Here is some @inline code@
-
-*bold*
-
-* List
-    * sub-list
-* second list item
-
-*# numbered list item
-*# second numbered list item
-
-
-h1. heading 1
-
-h2. heading 2
-
-h3. heading 3
-
-bq. This is a blockquote
-
-"Google Link":http://www.google.com
