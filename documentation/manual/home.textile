@@ -12,23 +12,27 @@ bc. - play -> springtester [version]
 h2. Usage
 
 The @springtester@ module assumes you are wiring your application using the @spring@ module.  Here is an example of two classes being wired up
-using the @spring@ module:
+using the @spring@ module.  The first is a @Person@ class that injects a @BirthCertificate@ and calls the @getAge()@ method:
 
 bc. @Component
 public class Person {
-    @Resource
-    private House house;
-
-    public void action() {
-        house.open();
+    @Resource private BirthCertificate certificate;
+    public void age() {
+        int age = certificate.getAge();
+        System.out.println("The age is " + age);
     }
 }
 
-@Component
-public class House {
-    public void open() {
-        ...
+The @BirthCertificate@ returns 10:
+
+bc. @Component
+public class BirthCertificate {
+    public int open() {
+        return 10;
     }
 }
+
+Now let's say you want to write a test for @Person@ called @PersonTest@ and wish to replace the @BirthCertificate@ with a mock that returns the age
+of 20 instead of 10.
 
 
