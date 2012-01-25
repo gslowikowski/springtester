@@ -10,7 +10,7 @@ bc. - play -> springtester [version]
 
 h2. Usage
 
-The @springtester@ module assumes you are wiring your application using the @spring@ module.  Here is an example of two classes being wired up using the @spring@ module.  The first is a @Person@ class that injects a @AgeCalculator@ and calls the @getAge()@ method:
+The @springtester@ module assumes you are wiring your application using the @spring@ module.  Here is an example of two classes being wired up using the @spring@ module.  The first is a @Person@ class that injects an @AgeCalculator@ and calls the @getAge(...)@ method:
 
 bc. @Component
 public class Person {
@@ -20,16 +20,16 @@ public class Person {
     }
 }
 
-The @AgeCalculator@ returns 10:
+The @AgeCalculator@ will then take the Person's birth date and calculate their age:
 
 bc. @Component
 public class AgeCalculator {
-    public int calculate(String date) {
+    public int calculate(String birthDate) {
         // some code that figures out the age of the person
     }
 }
 
-Now let's say you want to write a test for @Person@ called @PersonTest@ and wish to replace the @AgeCalculator@ with a mock that returns the age of 20 instead of calculating the age.
+Now let's say you want to write a test for @Person@ called @PersonTest@ and wish to replace the @AgeCalculator@ with a mock that returns the age of 20 instead of calculating the age:
 
 bc. public final class PersonTest extends SpringMockitoUnitTestCase {
     @Subject private Person subject;
