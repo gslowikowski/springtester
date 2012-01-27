@@ -25,7 +25,7 @@ public class Person {
     }
 }
 
-The @AgeCalculator@ will then take birth date of the @Person@ and calculate their age:
+Note that person itself is annotated with the @Component@ annotation.  The @AgeCalculator@ will then take birth date of the @Person@ and calculate their age:
 
 bc. @Component
 public class AgeCalculator {
