@@ -51,7 +51,9 @@ bc. public final class PersonTest extends SpringMockitoUnitTestCase {
 *How it works:*
 
 * The @PersonTest@ extends @SpringMockitoUnitTestCase@.
+
 * The annotation @Subject@ will automatically inject the subject into the test.  In the example above, a @Person@ object will be injected into the test.  Be sure that the subject is a Spring component by annotating it with @Component.
+
 * The annotation @Mock@ is used to auto-magically create a mock of the given class.  In the example above, an @AgeCalculator@ object will be mocked and set against the field @mockAgeCalculator@.  The @Mock@ annotation can take the @name@ property which specifies the name of the field the mock will replace in the subject.  If the field name of the object to be mocked is the same as the field name in the subject, you may omit the name property like so:
 
 bc. // The name of the mock "ageCalculator" has the same name as the
@@ -60,5 +62,7 @@ bc. // The name of the mock "ageCalculator" has the same name as the
 @Mock AgeCalculator ageCalculator;
 
 * The remainder of the example test above uses *Mockito* to mock the call to the @calculate@ method and return 20 and then asserts that the @subject.getAge()@ call will return 20.
+
 * The class @SpringMockitoUnitTestCase@ also provides the helper method @checkCount(Class<? extends Model> cls, long expected)@ which can be used to check the row count of table.
+
 * The @SpringMockitoUnitTestCase@ will also delete the test in-memory database before each test method to ensure a clean run for each test method execution.
