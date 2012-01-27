@@ -10,7 +10,7 @@ bc. - play -> springtester [version]
 
 h2. Usage
 
-The @springtester@ module assumes you are wiring your application using the @spring@ module.  Here is an example of two classes being wired up using the @spring@ module.  The first is a @Person@ class that injects an @AgeCalculator@ and calls the @getAge(...)@ method:
+The @springtester@ module assumes you are wiring your application using the @spring@ module.  Here is an example of two classes being wired up using the @spring@ module.  The first is a @Person@ class that injects an @AgeCalculator@ and calls the @calculate(...)@ method:
 
 bc. @Component
 public class Person {
@@ -21,7 +21,7 @@ public class Person {
     }
 }
 
-The @AgeCalculator@ will then take the @Person'@s birth date and calculate their age:
+The @AgeCalculator@ will then take the @Person@'s birth date and calculate their age:
 
 bc. @Component
 public class AgeCalculator {
@@ -30,7 +30,7 @@ public class AgeCalculator {
     }
 }
 
-Now let's say you want to write a test for @Person@ called @PersonTest@ and wish to replace the @AgeCalculator@ with a mock that returns the age of 20 instead of calculating the age:
+Now let's say you want to write a test for @Person@ called @PersonTest@ and wish to replace the @AgeCalculator@ with a mock that returns the age of 20 instead of calculating the @Person@'s actual age:
 
 bc. public final class PersonTest extends SpringMockitoUnitTestCase {
     @Subject private Person subject;
@@ -43,4 +43,11 @@ bc. public final class PersonTest extends SpringMockitoUnitTestCase {
     }
 }
 
+Things to note:
 
+* The annotation @Subject will automatically inject the subject into the test.  In the example above, a @Person@ object will be injected into the test.  Be sure that the subject is a Spring component by annotating it with @Component.
+* The annotation @Mock is used to create a mock of the given class.  In the example above, an @AgeCalculator@ object will be mocked.  The @Mock annotation can take the @name@ property which specifies the name of the field the mock will replace in the subject.  If you name the mock field the same as the field in the subject, you may omit the name property like so:
+
+bc. @Mock AgeCalculator ageCalculator;
+
+* The remainder of the example test above uses *Mockito* to mock the call to the @calculate@ method and return 20 and then asserts that the @subject.getAge()@ call will return 20.
