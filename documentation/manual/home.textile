@@ -21,7 +21,7 @@ public class Person {
     }
 }
 
-The @AgeCalculator@ will then take the @Person@'s birth date and calculate their age:
+The @AgeCalculator@ will then take birth date of the @Person@ and calculate their age:
 
 bc. @Component
 public class AgeCalculator {
@@ -30,7 +30,7 @@ public class AgeCalculator {
     }
 }
 
-Now let's say you want to write a test for @Person@ called @PersonTest@ and wish to replace the @AgeCalculator@ with a mock that returns the age of 20 instead of calculating the @Person@'s actual age:
+Now let's say you want to write a test for @Person@ called @PersonTest@ and wish to replace the @AgeCalculator@ with a mock that returns the age of 20 instead of calculating the actual age of the @Person@:
 
 bc. public final class PersonTest extends SpringMockitoUnitTestCase {
     @Subject private Person subject;
