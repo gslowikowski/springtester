@@ -8,6 +8,10 @@ Include @springtester@ in your Play! application by adding the following in your
 
 bc. - play -> springtester [version]
 
+Then update your project's dependencies to include @springtester@ and its dependencies:
+
+bc. play deps
+
 h2. Usage
 
 The @springtester@ module assumes you are wiring your application using the @spring@ module.  Here is an example of two classes being wired up using the @spring@ module.  The first is a @Person@ class that injects an @AgeCalculator@ and calls the @calculate(...)@ method:
