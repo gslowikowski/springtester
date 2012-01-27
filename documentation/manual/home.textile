@@ -51,7 +51,7 @@ bc. public final class PersonTest extends SpringMockitoUnitTestCase {
 Things to note:
 
 * The annotation @Subject@ will automatically inject the subject into the test.  In the example above, a @Person@ object will be injected into the test.  Be sure that the subject is a Spring component by annotating it with @Component.
-* The annotation @Mock@ is used to create a mock of the given class.  In the example above, an @AgeCalculator@ object will be mocked.  The @Mock@ annotation can take the @name@ property which specifies the name of the field the mock will replace in the subject.  If you name the mock field the same as the field in the subject, you may omit the name property like so:
+* The annotation @Mock@ is used to auto-magically create a mock of the given class.  In the example above, an @AgeCalculator@ object will be mocked.  The @Mock@ annotation can take the @name@ property which specifies the name of the field the mock will replace in the subject.  If you name the mock field the same as the field in the subject, you may omit the name property like so:
 
 bc. @Mock AgeCalculator ageCalculator;
 
