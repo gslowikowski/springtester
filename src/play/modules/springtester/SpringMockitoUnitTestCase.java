@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import org.junit.After;
+import org.junit.Before;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
@@ -14,8 +16,6 @@ import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.support.GenericApplicationContext;
 import play.modules.spring.Spring;
 import play.modules.spring.SpringPlugin;
-import play.mvc.After;
-import play.mvc.Before;
 
 /**
  * Used to test classes that require resources to be injected via spring plus the ability to inject mocked objects. Declare the test's subject by annotating a field with @Subject and this class will
