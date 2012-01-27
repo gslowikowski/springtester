@@ -1,6 +1,6 @@
 h1. springtester
 
-The @springtester@ module is used in conjunction with the @spring@ module and provides additional classes for injecting mocks/stubs when writing tests for your Play! application.
+The @springtester@ module is used in conjunction with the "spring":http://www.playframework.org/modules/spring module and "Mockito":http://code.google.com/p/mockito/ library and provides additional classes for injecting mocks/stubs when writing tests for your Play! application.
 
 h2. Getting started
 
