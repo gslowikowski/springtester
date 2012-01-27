@@ -18,6 +18,7 @@ The @springtester@ module assumes you are wiring your application using the @spr
 
 bc. @Component
 public class Person {
+    // Here we are injecting the AgeCalculator into the Person class
     @Resource private AgeCalculator calculator;
     public boolean canVote() {
         int age = calculator.calculate("1-January-1980");
