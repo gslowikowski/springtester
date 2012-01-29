@@ -49,7 +49,7 @@ bc. public final class PersonTest extends SpringMockitoUnitTestCase {
     @Test
     public void testCanVote() throws Exception {
         Mockito.when(mockAgeCalculator.calculate("1-January-1980")).thenReturn(20);
-        int actual = subject.canVote();
+        boolean actual = subject.canVote();
         assertEquals(true, actual);
     }
 }
