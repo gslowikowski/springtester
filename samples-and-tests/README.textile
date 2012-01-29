@@ -1,0 +1,13 @@
+h1. Spring Tester Demo Application
+
+The demo directory provides an example of a Play! application wired up using the Spring module and tested using the Spring Tester module.
+
+To run a build that executes the test, just follow these simple steps:
+
+* Open a terminal
+
+* Go to the @samples-and-tests/demo@ directory
+
+* Run @play deps --sync@ to resolve the dependencies of the demo application
+
+* Run @play auto-test@ to run the test
