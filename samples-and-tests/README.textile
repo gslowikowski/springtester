@@ -1,6 +1,6 @@
 h1. Spring Tester Demo Application
 
-The demo directory provides an example of a Play! application wired up using the Spring module and tested using the Spring Tester module.
+The demo directory provides an example of a Play! application wired up using the @Spring@ module and tested using the @Spring Tester@ module.
 
 To run a build that executes the test, just follow these simple steps:
 
