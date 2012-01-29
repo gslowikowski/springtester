@@ -12,7 +12,7 @@ As @springtester@ depends on the existing Spring Play! module, you will have to 
 
 bc. - play -> spring [version]
 
-*Note:* @springtester@ has currently only been tested with version 1.0.1 of the spring module.
+*Note:* @springtester@ has currently only been tested with @version 1.0.1@ of the @spring@ module.
 
 Then update your project's dependencies to include @springtester@ and its dependencies:
 
