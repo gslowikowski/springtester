@@ -2,12 +2,12 @@
 
 require:
     - play
-    - custom-modules -> springtester 0.1
     - play -> spring 1.0.1
+    - springtester -> springtester 0.1
 
 repositories:
-   - provided1:
-       type:       local
-       artifact:   "${application.path}/[organisation]/[module]-[revision]"
-       contains:
-         - custom-modules
+    - My modules:
+        type:       local
+        artifact:   ${application.path}/../../../[module]
+        contains:
+            - springtester
