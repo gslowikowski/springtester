@@ -1,12 +1,18 @@
 h1. springtester
 
-The @springtester@ module is used in conjunction with the "spring":http://www.playframework.org/modules/spring module and "Mockito":http://code.google.com/p/mockito/ library and provides additional classes for injecting mocks/stubs when writing tests for your Play! application.
+The @springtester@ module is used in conjunction with the "spring":http://www.playframework.org/modules/spring module.  Internally, it uses the "Mockito":http://code.google.com/p/mockito/ library and provides additional classes for injecting mocks/stubs when writing tests for your Play! application.
 
 h2. Getting started
 
 Include @springtester@ in your Play! application by adding the following in your @dependencies.yml@:
 
 bc. - play -> springtester [version]
+
+As @springtester@ depends on the existing Spring Play! module, you will have to include it as well:
+
+bc. - play -> spring [version]
+
+*Note:* @springtester@ has currently only been tested with version 1.0.1 of the spring module.
 
 Then update your project's dependencies to include @springtester@ and its dependencies:
 
