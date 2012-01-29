@@ -67,7 +67,7 @@ bc. // The name of the mock "ageCalculator" has the same name as the
 // does not require the "name" property.
 @Mock AgeCalculator ageCalculator;
 
-* The remainder of the example test above uses *Mockito* to mock the call to the @calculate@ method and return 20 and then asserts that the @subject.getAge()@ call will return 20.
+* The remainder of the example test above uses @Mockito@ to mock the call to the @calculate@ method and return 20 and then asserts that the @subject.getAge()@ call will return 20.
 
 * The class @SpringMockitoUnitTestCase@ extends @DatabaseUnitTestCase@ which provides the helper method @checkCount(Class<? extends Model> cls, long expected)@ which can be used to check the row count of table.
 
