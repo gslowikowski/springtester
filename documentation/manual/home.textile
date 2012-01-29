@@ -56,7 +56,7 @@ bc. public final class PersonTest extends SpringMockitoUnitTestCase {
 
 *How it works:*
 
-* The @PersonTest@ extends @SpringMockitoUnitTestCase@.
+* The @PersonTest@ extends @SpringMockitoUnitTestCase@.  This superclass does all the magic to inject mocks into your objects.
 
 * The annotation @Subject@ will auto-magically inject the subject into the test.  In the example above, a @Person@ object will be injected into the test.  Be sure that the subject is a Spring component by annotating it with @Component.
 
