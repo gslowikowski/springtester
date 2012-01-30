@@ -85,12 +85,15 @@ under the License.
                 <groupId>com.google.code.maven-play-plugin</groupId>
                 <artifactId>play-maven-plugin</artifactId>
                 <extensions>true</extensions>
+                <configuration>
+                    <precompileTests>true</precompileTests>
+                </configuration>
                 <executions>
                     <execution>
                         <id>precompile</id>
                         <phase>process-test-classes</phase>
                         <goals>
-                            <goal>test-precompile</goal>
+                            <goal>precompile</goal>
                         </goals>
                     </execution>
                 </executions>
