@@ -11,3 +11,5 @@ To run a build that executes the test, just follow these simple steps:
 * Run @play deps --sync@ to resolve the dependencies of the demo application
 
 * Run @play auto-test@ to run the test
+
+You can also start up the demo application using the standard @play run@ command.
