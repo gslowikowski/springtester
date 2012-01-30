@@ -4,12 +4,12 @@ The demo directory provides an example of a Play! application wired up using the
 
 To run a build that executes the test, just follow these simple steps:
 
-* Open a terminal
+* Open a terminal.
 
-* Go to the @samples-and-tests/demo@ directory
+* Go to the @samples-and-tests/demo@ directory.
 
-* Run @play deps --sync@ to resolve the dependencies of the demo application
+* Run @play deps --sync@ to resolve the dependencies of the demo application.  The @dependencies.yml@ assumes that you have the version number appended to the checkout directory of @springtester@.  Please check that the version number in @dependencies.yml@ matches the @springtester@ checkout directory on your machine.  For example, if the @dependencies.yml@ states that it is using @- springtester -> 0.1@, then your checkout directory needs to be called @springtester-0.1@.
 
-* Run @play auto-test@ to run the test
+* Run @play auto-test@ to run the test.
 
 You can also start up the demo application using the standard @play run@ command.
