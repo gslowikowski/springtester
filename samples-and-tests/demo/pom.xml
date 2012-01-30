@@ -90,11 +90,8 @@ under the License.
                         <id>precompile</id>
                         <phase>process-test-classes</phase>
                         <goals>
-                            <goal>precompile</goal>
+                            <goal>test-precompile</goal>
                         </goals>
-                        <configuration>
-                            <playId>${play.testId}</playId>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
